@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content='width\device-width, initial-scale=1.0'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Make Your Url Short!</title>
+</head>
+
+<body>
+    <div class='container'>
+        <h1 style='height: 80px; margin-top: 60px; text-align: center;'>Make Your URL Short!</h1>
+
+        <form action='/result' method='POST' class='my-4 form-inline' style="margin-bottom: 50px;">
+            <div style='display: inline' class='form-group'>
+                <input type='url' name='originUrl' id='originUrl' placeholder='URL을 입력해주세요.'
+                    class='col mr-2 form-control' style="height: 50px; width: 1150px; float: left; margin-left: 10px;"
+                    required>
+                <button class='btn btn-primary' type='submit'
+                    style="width: 100px; height: 50px; margin-left: 10px; margin-right: 10px; float: right">convert</button>
+            </div>
+        </form>
+
+        <table class='table table-hover table-responsive' style="margin-top: 100px;">
+            <thread class="thead-light">
+                <tr>
+                    <th>Origin URL</th>
+                    <th>Short URL</th>
+                    <th>Count</th>
+                </tr>
+            </thread>
+            <tbody>
+                <% shortUrls.forEach(function (element) { %>
+                <tr>
+                    <td><a href="<%= element.origin_url %>"><%= element.origin_url %></a></td>
+                    <td><a
+                            href="http://localhost:3000/result/<%= element.keyword %>">http://localhost:3000/result/<%= element.keyword %></a>
+                    </td>
+                    <td><%= element.count %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
