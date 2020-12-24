@@ -25,7 +25,7 @@
 
 ### DB 구성
 
-<img src="/Users/jinee/Library/Application Support/typora-user-images/스크린샷 2020-12-14 오후 5.04.04.png" alt="스크린샷 2020-12-14 오후 5.04.04" style="zoom: 67%;" />
+<img width="577" alt="스크린샷 2020-12-14 오후 5 43 39" src="https://user-images.githubusercontent.com/37479631/102059217-eae40b80-3e33-11eb-8582-d9716f78a0c3.png">
 
 <br>
 
