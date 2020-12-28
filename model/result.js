@@ -65,8 +65,8 @@ exports.updateCount= async(origin) => {
     const query = `UPDATE url SET count=(SELECT count FROM (SELECT count FROM url WHERE origin_url='${origin}')cnt)+1 WHERE origin_url='${origin}'`;
     try{
         const result = await pool.queryParam(query);
-        console.log('update count -> ', result);
-        return result;
+        // console.log('update count -> ', result);
+        return result.affectedRows;
     }catch(err) {
         console.log('ERROR : ', err);
         throw err;

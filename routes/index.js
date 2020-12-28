@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-const shortUrl = require('../model/shortUrl');
 const model = require('../model/result');
 
 /* GET home page. */
